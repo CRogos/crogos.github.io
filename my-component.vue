@@ -1,19 +1,23 @@
 <template>
-    <div class="hello">Hello {{who}}</div>
+  <div class="example">{{ msg }}</div>
 </template>
 
 <script>
-module.exports = {
-    data: function() {
-        return {
-            who: 'world'
-        }
+export default {
+  data () {
+    return {
+      msg: 'Hello world! 1'
     }
+  }
 }
 </script>
 
 <style>
-.hello {
-    background-color: #ffe;
+.example {
+  color: red;
 }
 </style>
+
+<custom1>
+  This could be e.g. documentation for the component.
+</custom1>
