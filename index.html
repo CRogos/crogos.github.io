@@ -7,19 +7,20 @@
 
   <body>
     <div id="app">
-      <my-component></my-component>
-    </div>
-{% raw %}
+      <hello name="mary" />
+   </div>
     <script type="text/javascript">
-      const app = {
-        components: {
-          'my-component': httpVueLoader('my-component.vue')
-        }
-      };
+        const root = {};
 
-      Vue.createApp(app).mount("#app");
+        const app = Vue.createApp(root);
+
+        app.component("hello", {
+        props: ["name"],
+        template: `<p>hello {{name}}</p>`
+        });
+
+        app.mount("#app");
 
     </script>
-{% endraw %}
   </body>
 </html>
