@@ -2,7 +2,7 @@ name: Generate thumbnails
 on:
   push:
     branches:
-      - images
+      - akaflieg-main
     paths:
       - 'content-img/**/*' # Only run on this path changes
 permissions:
