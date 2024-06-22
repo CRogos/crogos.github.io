@@ -60,11 +60,7 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: ./public
-      - name: Build with Hugo
+      - name: Build with Hugo Staging
         env:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
@@ -74,11 +70,12 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/staging"          
+            --baseURL "${{ steps.pages.outputs.base_url }}/staging"  
+            --publishDir "/public/staging"        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ./public/staging
+          path: ./public
 
   # Deployment job
   deploy:
