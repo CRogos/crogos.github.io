@@ -71,7 +71,7 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/staging" \
-            --destination "/public/staging"        
+            --destination "public/staging"        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
