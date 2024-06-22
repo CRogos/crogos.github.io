@@ -1,0 +1,3 @@
+[submodule "subpages/crogos.github.io"]
+	path = subpages/crogos.github.io
+	url = git@github.com:CRogos/crogos.github.io.git
