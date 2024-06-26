@@ -1,3 +1,7 @@
 [submodule "subpages/crogos.github.io"]
 	path = subpages/crogos.github.io
 	url = git@github.com:CRogos/crogos.github.io.git
+[submodule "subpages/akafliegfrankfurt.github.io"]
+	path = subpages/akafliegfrankfurt.github.io
+	url = git@github.com:akafliegfrankfurt/akafliegfrankfurt.github.io.git
+	branch = images
